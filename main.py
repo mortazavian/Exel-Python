@@ -1,27 +1,20 @@
+from openpyxl import Workbook, load_workbook
+from Colors import *
 import Average
 import Maximum
-
-
-class Colors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKCYAN = '\033[96m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
-
+import Minimum
 
 print(f"{Colors.OKCYAN}Hello User!!{Colors.ENDC}")
 
-user_input = int(input(f"{Colors.BOLD}1.Calculate Average\n"
-                       "2.Calculate Max\n"
-                       "3.Calculate Min\n"
-                       "4.Calculate\n"))
+function_user_input = int(input(f"{Colors.HEADER}1.Calculate Average\n"
+                                "2.Calculate Max\n"
+                                "3.Calculate Min\n"
+                                f"4.Calculate Sum\n{Colors.ENDC}"))
 
-avg = Average.calculate_average([1, 2, 3, 4])
-print(avg)
-maximum = Maximum.find_maximum([1, 2, 3, 4])
-print(maximum)
+file_name_user_input = input(
+    f"Enter the name of the{Colors.WARNING}{Colors.BOLD} file {Colors.ENDC}{Colors.ENDC}you want to work on: ")
+sheet_name_user_input = input(
+    f"Enter the name of the{Colors.WARNING}{Colors.BOLD} sheet {Colors.ENDC}{Colors.ENDC}you want to work on: ")
+column_user_input = input(
+    f"Enter the{Colors.WARNING}{Colors.BOLD} column {Colors.ENDC}{Colors.ENDC}you want to work on: ")
+
