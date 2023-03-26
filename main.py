@@ -18,3 +18,6 @@ sheet_name_user_input = input(
 column_user_input = input(
     f"Enter the{Colors.WARNING}{Colors.BOLD} column {Colors.ENDC}{Colors.ENDC}you want to work on: ")
 
+# Load WorkBook for the file we want to work on
+wb = load_workbook(file_name_user_input)
+ws = wb.activate
