@@ -1,4 +1,6 @@
-import  Average
+import Average
+import Maximum
+
 
 class Colors:
     HEADER = '\033[95m'
@@ -19,6 +21,7 @@ user_input = int(input(f"{Colors.BOLD}1.Calculate Average\n"
                        "3.Calculate Min\n"
                        "4.Calculate\n"))
 
-
-avg = Average.calculate_average([1,2,3,4])
+avg = Average.calculate_average([1, 2, 3, 4])
 print(avg)
+maximum = Maximum.find_maximum([1, 2, 3, 4])
+print(maximum)
